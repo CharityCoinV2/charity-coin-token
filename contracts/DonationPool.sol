@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.2;
 
-import "hardhat/console.sol";
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./IERC20.sol";
 
 interface IDonationPool {
     function updatePool (address sender, address token, uint256 amount) external;
@@ -62,7 +62,6 @@ contract DonationPool {
 
     function transferToCharity(address token, address recipient, uint256 amount) external onlyOwner {
 
-        console.log("DonationPool -> transferToCharity", amount, recipient);
 
         require(amount > 0, "Amount must be greater than zero");
         require(totalDonations[token] >= amount, "Insufficient balance");
@@ -73,17 +72,6 @@ contract DonationPool {
         emit Transfer(address(this), recipient, token, amount);
     }
 
-    // function donate(address token, uint256 amount) external {
-
-    //     console.log("DonationPool -> donate", amount);
-
-    //     require(amount > 0, "Amount must be greater than zero");
-
-    //     uint256 allowance = IERC20(token).allowance(msg.sender, address(this));
-    //     require(allowance >= amount, "Insufficient allowance");
-        
-    //     IERC20(token).transferFrom(msg.sender, address(this), amount);
-    // }
 
     function getDonationBalance(address token, address donor) external view returns (uint256) {
         return donations[token][donor];
