@@ -2,9 +2,13 @@
 
 ## Introduction
 
-### Overview of Charity Coin
+### Charity Coin Overview
 
-Charity Coin is an innovative digital currency engineered on the Ethereum blockchain, utilizing the ERC-20 token standard. Designed to integrate philanthropic activities with everyday financial transactions, Charity Coin leverages the immutable and transparent nature of blockchain technology to ensure every transaction contributes to charitable causes.
+Charity Coin is a unique platform designed to make charitable giving transparent, efficient, and community-driven. Engineered on the Ethereum blockchain, utilizing the ERC-20 standard, Charity Coin leverages the immutable and transparent nature of blockchain technology to ensure every transaction contributes to charitable causes. 
+
+### Charity Coin Mission
+
+Our mission is straightforward: utilize blockchain technology to make donations transparent and impactful. 
 
 ## Technical Specifications
 
@@ -30,7 +34,7 @@ At inception, 5% of the total token supply, amounting to 150 million Charity Coi
 
 Each transaction with Charity Coin incurs a nominal fee of 1%, which is automatically redirected to the Charity Pool. This fee mechanism ensures a steady flow of resources into the pool, perpetuating the funding of charitable projects without requiring additional action from users.
 
-## Charity Pool Contract
+## Donation Pool Contract
 
 ### Function and Governance
 
